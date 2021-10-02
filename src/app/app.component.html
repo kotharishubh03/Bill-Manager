@@ -3,13 +3,13 @@
     <!-- Sidebar -->
     <div class="w3-theme-d6 border-right border-3" id="sidebar-wrapper">
         <div class="sidebar-heading w3-theme-d7">
-            <h5>Bill Manager</h5>
+            <h5>Bill Manager</h5> 
         </div>
         <hr class="m-0 p-0">
         <hr class="m-0 p-0">
         <div class="list-group list-group-flush">
-            <a href="#" class="list-group-item list-group-item-action w3-theme-d6"><span><fa-icon [icon]="faTachometerAlt" size="lg" [fixedWidth]="true"></fa-icon> Dashboard</span></a>
-            <a href="#" class="list-group-item list-group-item-action w3-theme-d6"><fa-icon [icon]="faStoreAlt" size="lg" [fixedWidth]="true"></fa-icon> Purchase</a>
+            <a class="list-group-item list-group-item-action w3-theme-d6"><fa-icon [icon]="faTachometerAlt" size="lg" [fixedWidth]="true"></fa-icon> Dashboard</a>
+            <a routerLink="Purchase" class="list-group-item list-group-item-action w3-theme-d6"><fa-icon [icon]="faStoreAlt" size="lg" [fixedWidth]="true"></fa-icon> Purchase</a>
             <a href="#" class="list-group-item list-group-item-action w3-theme-d6"><fa-icon [icon]="faClipboardCheck" size="lg" [fixedWidth]="true"></fa-icon> Sales</a>
             <a href="#" class="list-group-item list-group-item-action w3-theme-d6"><fa-icon [icon]="faPeopleCarry" size="lg" [fixedWidth]="true"></fa-icon> Suppliers</a>
             <a href="#" class="list-group-item list-group-item-action w3-theme-d6"><fa-icon [icon]="faBoxOpen" size="lg" [fixedWidth]="true"></fa-icon> Products</a>
@@ -20,22 +20,8 @@
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
-
-        <nav class="navbar navbar-light bg-light border-bottom">
-            <button class="btn navbar-toggler " id="menu-toggle"><span class="navbar-toggler-icon"></span></button>
-            <a class="p-3 mr-3" style="text-decoration: none;">About APP</a>
-        </nav>
-
-        <div class="container-fluid">
-            <h1 class="mt-4">Simple Sidebar</h1>
-            <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on
-                larger screens. When toggled using the button below, the menu will change.</p>
-            <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is
-                optional,
-                and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will
-                toggle the
-                menu when clicked.</p>
-        </div>
+        <app-top-nav></app-top-nav>
+        <router-outlet></router-outlet>
     </div>
     <!-- /#page-content-wrapper -->
 
